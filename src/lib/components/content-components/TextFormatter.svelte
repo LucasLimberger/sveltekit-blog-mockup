@@ -15,7 +15,7 @@
 	);
 </script>
 
-<span>
+<span class="text">
 	{#each tokens as token}
 		{#if token.type === "none"}
 			{token.value}
@@ -32,6 +32,10 @@
 </span>
 
 <style>
+	.text {
+		white-space-collapse: preserve;
+	}
+
 	strong {
 		color: var(--text-accent-clr);
 	}
