@@ -6,20 +6,24 @@
 	import ContentDelegator from "$lib/components/ContentDelegator.svelte";
 
 	const { data } = $props();
-	const topicName = $derived(data.topicName);
-	const pageName = $derived(data.pageName);
-	const content = $derived(data.content);
-	const currentPathname = $derived(`/${topicName}/${pageName}`);
+	const currentPath = $derived(data.path);
+	const title = $derived(data.title);
+	const subtitle = $derived(data.subtitle);
+	const pageContent = $derived(data.content);
+	const previousPagePath = $derived(data.previousPagePath);
+	const nextPagePath = $derived(data.nextPagePath);
+	const allPageTitles = $derived(data.allPageTitles);
+	const currentTopicTitles = $derived(data.allPageTitles.filter(page => page.title === title));
 
-	let menuOpen = $state(false);
+	let menuIsOpen = $state(false);
 	function toggleMenu() {
-		menuOpen = !menuOpen;
+		menuIsOpen = !menuIsOpen;
 	}
 
 	const visitedPaths = $state(getVisitedPaths());
 	$effect(() => {
-		if (!visitedPaths.includes(currentPathname)) {
-			visitedPaths.push(currentPathname);
+		if (!visitedPaths.includes(currentPath)) {
+			visitedPaths.push(currentPath);
 		}
 	});
 	$effect(() => {
@@ -39,7 +43,7 @@
 </script>
 
 <svelte:head>
-	<title>{topicName} - {pageName}</title>
+	<title>{title} - {subtitle}</title>
 </svelte:head>
 
 <div class="page-wrapper">
@@ -48,22 +52,28 @@
 		<OptionsMenu onMenuButtonClick={toggleMenu} />
 		<div class="separator" role="presentation"></div>
 		<nav>
-			<TopicNavList {topicName} {currentPathname} {visitedPaths} />
+			<TopicNavList {title} pages={currentTopicTitles} {currentPath} {visitedPaths} />
 		</nav>
-		<NavMenu isOpen={menuOpen} {currentPathname} {visitedPaths} onDismiss={toggleMenu} />
+		<NavMenu
+			isOpen={menuIsOpen}
+			pages={allPageTitles}
+			{currentPath}
+			{visitedPaths}
+			onDismiss={toggleMenu}
+		/>
 	</aside>
 	<main>
 		<article>
 			<header>
-				<h1>{topicName}</h1>
+				<h1>{title}</h1>
 				<div class="separator accent" role="presentation"></div>
-				<h2>{pageName}</h2>
+				<h2>{subtitle}</h2>
 			</header>
 			<section>
-				<ContentDelegator contentFragments={content} />
+				<ContentDelegator contentFragments={pageContent} />
 			</section>
 		</article>
-		<PrevNextButtons currentTopic={topicName} currentPage={pageName} />
+		<PrevNextButtons {previousPagePath} {nextPagePath} />
 	</main>
 </div>
 

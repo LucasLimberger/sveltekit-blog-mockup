@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import { firstPagePath } from "$lib/scripts/dataAcess";
+	import { firstPagePath } from "$lib/data/dataAcess";
 	import { getThemeCookieValue, setThemeCookieValue } from "$lib/scripts/themeCookieAcess";
 
 	if (typeof window !== "undefined") {

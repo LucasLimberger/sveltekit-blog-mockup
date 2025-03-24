@@ -1,16 +1,11 @@
 <script lang="ts">
-	import { previousPage, nextPage } from "$lib/scripts/dataAcess";
-
-	type Props = { currentTopic: string; currentPage: string };
-	const { currentTopic, currentPage }: Props = $props();
-
-	const previous = $derived(previousPage(currentTopic, currentPage));
-	const next = $derived(nextPage(currentTopic, currentPage));
+	type Props = { previousPagePath: string | null; nextPagePath: string | null };
+	const { previousPagePath, nextPagePath }: Props = $props();
 </script>
 
-<div class="container">
-	{@render link(previous, "Anterior")}
-	{@render link(next, "Próximo")}
+<div class="component-container">
+	{@render link(previousPagePath, "Anterior")}
+	{@render link(nextPagePath, "Próximo")}
 </div>
 
 {#snippet link(href: string | null, text: string)}
@@ -22,7 +17,7 @@
 {/snippet}
 
 <style>
-	.container {
+	.component-container {
 		display: flex;
 		column-gap: 1rem;
 		justify-content: space-between;
@@ -33,11 +28,12 @@
 		color: inherit;
 		text-decoration: none;
 	}
-
 	a:hover,
 	a:focus-visible {
 		outline: 0.2rem solid var(--focus-outline-clr);
 		outline-offset: 0.125rem;
+		text-decoration: underline;
+		text-decoration-thickness: 0.125em;
 	}
 
 	.text-wrapper {

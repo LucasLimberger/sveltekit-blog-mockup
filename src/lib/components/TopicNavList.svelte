@@ -1,25 +1,24 @@
 <script lang="ts">
-	import { allPageNames } from "$lib/scripts/dataAcess";
 	type Props = {
-		topicName: string;
-		currentPathname: string;
+		title: string;
+		pages: readonly { path: string; subtitle: string }[];
+		currentPath: string;
 		visitedPaths: readonly string[];
 	};
-	const { topicName, currentPathname, visitedPaths }: Props = $props();
+	const { title, pages, currentPath, visitedPaths }: Props = $props();
 </script>
 
-<h2>{topicName}</h2>
+<h2>{title}</h2>
 <ol>
-	{#each allPageNames(topicName) as pageName}
-		{@const pathname = `/${topicName}/${pageName}`}
+	{#each pages as page}
 		<li>
 			<a
-				href={pathname}
-				class:visited={visitedPaths.includes(pathname)}
-				aria-current={pathname === currentPathname ? "page" : undefined}
+				href={page.path}
+				class:visited={visitedPaths.includes(page.path)}
+				aria-current={page.path === currentPath ? "page" : undefined}
 				data-sveltekit-keepfocus
 			>
-				{pageName}
+				{page.subtitle}
 			</a>
 		</li>
 	{/each}
@@ -60,6 +59,7 @@
 	}
 	a:hover {
 		background-color: var(--link-hover-bg-clr, var(--background-secondary-clr));
+		text-decoration: underline;
 	}
 	a:focus-visible {
 		outline-color: var(--focus-outline-clr);
@@ -68,6 +68,7 @@
 	a[aria-current] {
 		background-color: var(--nav-current-clr);
 		font-style: italic;
+		text-decoration: none;
 		cursor: default;
 	}
 	@media (prefers-reduced-motion: reduce) {

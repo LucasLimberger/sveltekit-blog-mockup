@@ -1,16 +1,17 @@
 <script lang="ts">
-	import { allTopicNames } from "$lib/scripts/dataAcess";
 	import trapFocusWithin from "$lib/actions/trapFocusWithin.svelte";
 	import customSlide from "$lib/transitions/customSlide";
 	import TopicNavList from "./TopicNavList.svelte";
 
 	type Props = {
 		isOpen: boolean;
-		currentPathname: string;
+		pages: readonly { title: string; subtitle: string; path: string }[];
+		currentPath: string;
 		visitedPaths: readonly string[];
 		onDismiss: () => void;
 	};
-	const { isOpen, currentPathname, visitedPaths, onDismiss }: Props = $props();
+	const { isOpen, pages, currentPath, visitedPaths, onDismiss }: Props = $props();
+	const topics = $derived(Object.groupBy(pages, page => page.title));
 
 	function handleBodyKeyDown(event: KeyboardEvent) {
 		if (event.key === "Escape" && isOpen) {
@@ -33,9 +34,9 @@
 		>
 		<nav aria-label="Todas as páginas">
 			<ol>
-				{#each allTopicNames() as topicName}
+				{#each Object.entries(topics) as [title, pages]}
 					<li>
-						<TopicNavList {topicName} {currentPathname} {visitedPaths} />
+						<TopicNavList {title} pages={pages!} {currentPath} {visitedPaths} />
 					</li>
 				{/each}
 			</ol>

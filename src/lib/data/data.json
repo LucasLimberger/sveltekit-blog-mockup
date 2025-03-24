@@ -1,8 +1,10 @@
 [
 	{
+		"pathDirectory": "inicio",
 		"title": "Início",
 		"pages": [
 			{
+				"path": "javascript",
 				"subtitle": "Javascript",
 				"content": [
 					"JavaScript é uma linguagem de programação que foi criada inicialmente para utilização em websites, mas hoje em dia aparece em diversos outros lugares.",
@@ -12,6 +14,7 @@
 				]
 			},
 			{
+				"path": "estrutura-basica",
 				"subtitle": "Estrutura básica",
 				"content": [
 					"Para começar, vou introduzir esse pedaço de código: `console.log(100)`.",
@@ -34,6 +37,7 @@
 				]
 			},
 			{
+				"path": "variaveis",
 				"subtitle": "Variáveis",
 				"content": [
 					"Variáveis são o conceito básico mais importante. Elas funcionam como caixas de informações, você armazena alguma coisa nela e pode retirar o que tem dentro depois.",
@@ -62,6 +66,7 @@
 				]
 			},
 			{
+				"path": "operacoes-matematicas",
 				"subtitle": "Operações matemáticas",
 				"content": [
 					"Em código, existem as operações matemáticas básicas.",
@@ -94,9 +99,11 @@
 		]
 	},
 	{
+		"pathDirectory": "listas",
 		"title": "Listas",
 		"pages": [
 			{
+				"path": "criando-uma-lista",
 				"subtitle": "Criando uma lista",
 				"content": [
 					"Listas são uma maneira de agregar informações. Uma lista também pode ser chamada de \"vetor\", ou por seu nome em inglês, _\"Array\"_. Uma lista é criada com [colchetes] e vírgulas:",
@@ -117,6 +124,7 @@
 				]
 			},
 			{
+				"path": "acesso",
 				"subtitle": "Acesso",
 				"content": [
 					"Para acessar itens individuais de uma lista você usa os colchetes de novo, e coloca dentro a posição.",
@@ -135,6 +143,7 @@
 				]
 			},
 			{
+				"path": "at",
 				"subtitle": ".at( )",
 				"content": [
 					"O código anterior sempre resulta no último caractere de uma string, ou no último item de uma lista.",
@@ -147,7 +156,8 @@
 				]
 			},
 			{
-				"subtitle": "Modificação",
+				"path": "modificando",
+				"subtitle": "Modificando",
 				"content": [
 					"Para alterar listas depois que elas forem criadas, temos uma variedade de opções.",
 					"Primeiramente, além de acessar, colchetes são usados para substituir itens em listas.",
@@ -165,9 +175,11 @@
 		]
 	},
 	{
+		"pathDirectory": "tipos-e-conversoes",
 		"title": "Tipos e conversões",
 		"pages": [
 			{
+				"path": "condicoes",
 				"subtitle": "Condições",
 				"content": [
 					"Por enquanto todo o código aqui foi executado, mas frequentemente, você precisa que um pedaço do código só aconteça às vezes.",
@@ -197,6 +209,7 @@
 				]
 			},
 			{
+				"path": "numeros-e-strings",
 				"subtitle": "Números e strings",
 				"content": [
 					"Todo valor possui um tipo associado a ele. Você já viu números, strings, listas.",
@@ -230,6 +243,7 @@
 				]
 			},
 			{
+				"path": "mais-tipos",
 				"subtitle": "Mais tipos",
 				"content": [
 					"Para descobrir o tipo de um valor usa-se o `typeof`.",
@@ -247,6 +261,7 @@
 				]
 			},
 			{
+				"path": "convertendo-listas",
 				"subtitle": "Convertendo listas",
 				"content": [
 					"###De lista para string",
@@ -272,9 +287,11 @@
 		]
 	},
 	{
+		"pathDirectory": "repeticoes",
 		"title": "Repetições",
 		"pages": [
 			{
+				"path": "de-novo",
 				"subtitle": "De novo!",
 				"content": [
 					"Digamos que você tem uma lista de preços e quer descobrir o total dela. Como faria?",
@@ -306,6 +323,7 @@
 				]
 			},
 			{
+				"path": "de-novo-de-novo",
 				"subtitle": "De novo! (de novo)",
 				"content": [
 					"Às vezes você quer fazer um pedaço do código eexecutar múltiplas vezes, mas sem nenhuma associação à uma lista.",
@@ -322,7 +340,8 @@
 				]
 			},
 			{
-				"subtitle": "De novo! (de novo) (de novo)",
+				"path": "mais-uma-vez",
+				"subtitle": "E mais uma vez",
 				"content": [
 					"```let repeticoes = 5\nfor (let i = 0; i < repeticoes; i++) {\n\tconsole.log(i)\n}```",
 					"Essa estrutura de repetição é chamada só de `for`.",

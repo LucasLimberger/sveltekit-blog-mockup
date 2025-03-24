@@ -1,16 +1,25 @@
 import type { PageLoad } from "./$types";
 import { error } from "@sveltejs/kit";
-import { findPageContent } from "$lib/scripts/dataAcess";
+import {
+	findPageContents,
+	nextPagePath,
+	previousPagePath,
+	allPageTitles,
+} from "$lib/data/dataAcess";
 
 export const load: PageLoad = async ({ params }) => {
-	const pageContent = findPageContent(params.topic, params.page);
-
-	if (pageContent === null) {
+	const path = `/${params.topic}/${params.page}`;
+	const pageContents = findPageContents(path);
+	if (pageContents === null) {
 		error(404, "Not found");
 	}
 	return {
-		topicName: params.topic,
-		pageName: params.page,
-		content: pageContent,
+		path,
+		title: pageContents.title,
+		subtitle: pageContents.subtitle,
+		content: pageContents.content,
+		previousPagePath: previousPagePath(path),
+		nextPagePath: nextPagePath(path),
+		allPageTitles: allPageTitles(),
 	};
 };
