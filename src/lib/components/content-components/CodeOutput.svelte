@@ -1,6 +1,7 @@
 <script lang="ts">
 	import CodeFormatter from "./CodeFormatter.svelte";
 	type Props = { content: string };
+
 	const { content }: Props = $props();
 </script>
 

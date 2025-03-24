@@ -1,5 +1,5 @@
 <script lang="ts">
-	import repr from "$lib/scripts/repr";
+	import evaluateOutput from "$lib/scripts/evaluateOutput";
 	import CodeFormatter from "./CodeFormatter.svelte";
 	import CodeOutput from "./CodeOutput.svelte";
 
@@ -12,7 +12,8 @@
 	const [contentBefore, contentAfter] = $derived(content.split(separator));
 
 	let inputValue = $state<string | number | null>(null);
-	let processedInput = $derived(processInput(inputValue, inputType));
+	const processedInput = $derived(processInput(inputValue, inputType));
+	const output = $derived(evaluateOutput(processCode(content, processedInput)));
 
 	function processInput(value: string | number | null, type: string) {
 		if (type === "number") {
@@ -22,16 +23,8 @@
 		return '"' + value.replaceAll("\\", "\\\\").replaceAll('"', '\\"') + '"';
 	}
 
-	function evaluateOutput(code: string) {
-		code = code.replaceAll(/console\.(log|error|warn|info)/g, "$OUTPUT.push");
-		const setup = `let $TEXT, $NUMBER = $TEXT = ${processedInput}\nconst $OUTPUT = [];\n`;
-		code = setup + code + "\n$OUTPUT;";
-		try {
-			const result: unknown[] = eval(code);
-			return result.map(v => "> " + repr(v)).join("\n");
-		} catch (error) {
-			return (error as Error).name + ": " + (error as Error).message;
-		}
+	function processCode(code: string, input: string) {
+		return `let $TEXT, $NUMBER = $TEXT = ${input};\n${code}`;
 	}
 </script>
 
@@ -43,7 +36,7 @@
 			</code></pre>
 		<label><input type={inputType} id={inputId} bind:value={inputValue} /></label>
 	</div>
-	<output for={inputId}><CodeOutput content={evaluateOutput(content)} /></output>
+	<output for={inputId}><CodeOutput content={output} /></output>
 </div>
 
 <style>

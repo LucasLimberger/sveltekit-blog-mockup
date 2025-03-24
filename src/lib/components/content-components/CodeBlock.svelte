@@ -1,5 +1,5 @@
 <script lang="ts">
-	import repr from "$lib/scripts/repr";
+	import evaluateOutput from "$lib/scripts/evaluateOutput";
 	import CodeFormatter from "./CodeFormatter.svelte";
 	import CodeOutput from "./CodeOutput.svelte";
 
@@ -8,17 +8,6 @@
 
 	const codeContent = $derived(content.startsWith("*") ? content.slice(1) : content);
 	const output = $derived(content.startsWith("*") ? "" : evaluateOutput(codeContent));
-
-	function evaluateOutput(code: string) {
-		code = code.replaceAll(/console\.(log|error|warn|info)/g, "$OUTPUT.push");
-		code = "const $OUTPUT = [];\n" + code + "\n$OUTPUT;";
-		try {
-			const result: unknown[] = eval(code);
-			return result.map(v => "> " + repr(v)).join("\n");
-		} catch (error) {
-			return (error as Error).name + ": " + (error as Error).message;
-		}
-	}
 </script>
 
 <div class="component-container">
