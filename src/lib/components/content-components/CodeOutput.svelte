@@ -15,8 +15,8 @@
 		background-color: var(--background-secondary-clr);
 		background-image: repeating-linear-gradient(
 			to bottom,
-			transparent 0%,
-			hsl(0 0% 0% / 0.05) 0.25rem,
+			transparent 0rem,
+			hsl(0 0% 42% / 0.06) 0.25rem,
 			transparent 0.5rem
 		);
 		border-width: 0.2rem;
