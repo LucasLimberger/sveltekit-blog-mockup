@@ -69,16 +69,23 @@
 		font: inherit;
 		cursor: pointer;
 
-		transition: background-color 0.3s;
+		animation-duration: 0.3s;
 	}
+
 	button:hover,
 	button:focus-visible {
-		background-color: var(--background-secondary-clr);
 		outline: 0.2rem solid var(--focus-outline-clr);
+		animation-name: focus;
+		animation-fill-mode: forwards;
+	}
+	@keyframes focus {
+		to {
+			background-color: var(--background-secondary-clr);
+		}
 	}
 	@media (prefers-reduced-motion: reduce) {
 		button {
-			transition: none;
+			animation-duration: 0s;
 		}
 	}
 

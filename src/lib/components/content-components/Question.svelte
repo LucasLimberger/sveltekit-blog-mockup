@@ -73,7 +73,7 @@
 		padding: 0.5rem 1rem;
 
 		border-radius: 2rem;
-		background-color: var(--background-secondary-clr);
+		background-color: transparent;
 		border: none;
 		outline: 1px solid var(--button-outline-clr);
 		font: inherit;
@@ -89,7 +89,7 @@
 	button:not(:disabled):hover,
 	button:not(:disabled):focus-visible {
 		outline: 0.2rem solid var(--focus-outline-clr);
-		background-color: var(--background-prmiary-clr);
+		background-color: var(--background-secondary-clr);
 	}
 
 	button.correct {
@@ -110,7 +110,6 @@
 		background-color: var(--answer-correct-clr);
 		animation: grow 0.3s ease-in-out;
 	}
-
 	@keyframes grow {
 		0% {
 			scale: 0;
@@ -121,20 +120,9 @@
 	}
 
 	button.incorrect {
-		background-color: var(--answer-incorrect-clr);
-		animation-name: bgColorShift, shake;
-		animation-duration: 500ms;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
+		animation: shake-and-shift-color 0.5s forwards ease-out;
 	}
-
-	@keyframes bgColorShift {
-		0% {
-			background-color: var(--background-secondary-clr);
-		}
-	}
-
-	@keyframes shake {
+	@keyframes shake-and-shift-color {
 		12.5% {
 			translate: -0.25rem 0;
 		}
@@ -152,13 +140,14 @@
 		}
 		100% {
 			translate: 0 0;
+			background-color: var(--answer-incorrect-clr);
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		button.correct::before,
-		button.incorrect {
-			animation-duration: 0s;
+		button,
+		button::before {
+			animation-duration: 0s !important;
 		}
 	}
 </style>

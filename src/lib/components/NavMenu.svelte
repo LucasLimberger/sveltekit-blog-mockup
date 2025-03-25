@@ -28,9 +28,11 @@
 		use:trapFocusWithin
 		transition:customSlide={{ duration: 500, amountY: "100% + 2rem" }}
 	>
-		<button aria-label="Fechar menu" onclick={onDismiss}
-			><div class="close-icon" role="presentation"></div></button
-		>
+		<div class="button-wrapper">
+			<button aria-label="Fechar menu" onclick={onDismiss}>
+				<div class="close-icon" role="presentation"></div>
+			</button>
+		</div>
 		<nav aria-label="Todas as páginas">
 			<ol>
 				{#each Object.entries(topics) as [title, pages]}
@@ -70,17 +72,25 @@
 		--link-hover-bg-clr: var(--background-primary-clr);
 	}
 
-	button {
+	.button-wrapper {
 		position: absolute;
 		top: 0;
 		right: 0;
 		translate: -0.5rem -50%;
 		width: 3rem;
 		height: 3rem;
-		padding: 0.75rem;
 
 		border-radius: 50%;
 		background-color: var(--background-tertiary-clr);
+	}
+	button {
+		width: 100%;
+		height: 100%;
+		padding: 0.75rem;
+
+		border-radius: 50%;
+		background-color: transparent;
+		/* Usando fundo transparente para que a transição não ative quando o tema mudar */
 		border: none;
 		box-shadow: 0.25rem -0.5rem 0.5rem var(--nav-shadow-clr);
 		color: inherit;
@@ -91,6 +101,7 @@
 
 		transition: background-color 0.3s;
 	}
+
 	button:hover,
 	button:focus-visible {
 		outline: 0.2rem solid var(--focus-outline-clr);
@@ -117,8 +128,10 @@
 		nav {
 			border-top-left-radius: 1rem;
 		}
-		button {
+		.button-wrapper {
 			translate: 40% -40%;
+		}
+		button {
 			box-shadow: 1.25rem -0.5rem 0.5rem var(--nav-shadow-clr);
 		}
 	}

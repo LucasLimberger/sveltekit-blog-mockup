@@ -29,7 +29,7 @@
 </script>
 
 <div class="component-container">
-	<div class="input-wrapper">
+	<div class="code-wrapper">
 		<pre><code>
 				<CodeFormatter content={contentBefore} /><span class="code-insert-point">{processedInput}</span
 				><CodeFormatter content={contentAfter} />
@@ -47,7 +47,7 @@
 		column-gap: 1.5rem;
 	}
 
-	.input-wrapper {
+	.code-wrapper {
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
@@ -63,12 +63,16 @@
 		font-size: 0.9rem;
 	}
 
+	label {
+		background-color: var(--background-primary-clr);
+	}
 	input {
 		width: 100%;
 		padding: 0.25rem 0.5rem;
 
 		border-radius: 0.125rem;
-		background-color: var(--background-primary-clr);
+		background-color: transparent;
+		/* Usando fundo transparente para que a transição não ative quando o tema mudar */
 		border-width: 0.2rem;
 		border-style: solid;
 		border-color: var(--inset-border-clrs);
@@ -79,6 +83,7 @@
 
 		transition: background-color 0.3s;
 	}
+
 	input:hover,
 	input:focus-visible {
 		background-color: var(--background-tertiary-clr);
@@ -92,6 +97,7 @@
 			transition: none;
 		}
 	}
+
 	code {
 		white-space-collapse: collapse;
 		word-break: break-all;
