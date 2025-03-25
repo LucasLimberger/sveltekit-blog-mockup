@@ -19,7 +19,7 @@
 	--code-comment-clr: hsl(0 0% 50%);
 	--code-string-clr: hsl(20 100% 40%);
 	--code-keyword-clr: hsl(300 100% 40%);
-	--code-keyword2-clr: hsl(240 90% 35%);
+	--code-special-value-clr: hsl(240 90% 35%);
 	--code-function-clr: hsl(60 100% 30%);
 	--code-number-clr: hsl(140 100% 30%);
 	--inset-border-clrs: var(--background-tertiary-clr) hsl(0 0 100%) hsl(0 0 100%)
