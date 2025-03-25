@@ -19,27 +19,6 @@
 	function toggleMenu() {
 		menuIsOpen = !menuIsOpen;
 	}
-
-	const visitedPaths = $state(getVisitedPaths());
-	$effect(() => {
-		if (!visitedPaths.includes(currentPath)) {
-			visitedPaths.push(currentPath);
-		}
-	});
-	$effect(() => {
-		localStorage.setItem("visitedPaths", [...visitedPaths].join(","));
-	});
-
-	function getVisitedPaths() {
-		if (typeof window === "undefined") {
-			return [];
-		}
-		const localStorageValue = localStorage.getItem("visitedPaths");
-		if (localStorageValue === null) {
-			return [];
-		}
-		return localStorageValue.split(",");
-	}
 </script>
 
 <svelte:head>
@@ -52,15 +31,9 @@
 		<OptionsMenu onMenuButtonClick={toggleMenu} />
 		<div class="separator" role="presentation"></div>
 		<nav>
-			<TopicNavList {title} pages={currentTopicTitles} {currentPath} {visitedPaths} />
+			<TopicNavList {title} pages={currentTopicTitles} {currentPath} />
 		</nav>
-		<NavMenu
-			isOpen={menuIsOpen}
-			pages={allPageTitles}
-			{currentPath}
-			{visitedPaths}
-			onDismiss={toggleMenu}
-		/>
+		<NavMenu isOpen={menuIsOpen} pages={allPageTitles} {currentPath} onDismiss={toggleMenu} />
 	</aside>
 	<main>
 		<article>
