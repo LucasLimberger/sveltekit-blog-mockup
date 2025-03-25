@@ -6,92 +6,22 @@
 			{
 				"path": "javascript",
 				"subtitle": "Javascript",
-				"content": [
-					"JavaScript é uma linguagem de programação que foi criada inicialmente para utilização em websites, mas hoje em dia aparece em diversos outros lugares.",
-					"A linguagem foi criada em 1995, mas foi atualizada ao longo dos anos.",
-					"Em comparação com outras linguagens de programação, JavaScript é uma das mais fáceis de aprender, tornando-a uma boa primeira escolha.",
-					"Essa é uma introdução aos fundamentos da programação utilizando a forma moderna dela."
-				]
+				"content": "JavaScript é uma linguagem de programação que foi criada inicialmente para utilização em websites, mas hoje em dia aparece em diversos outros lugares.\nA linguagem foi criada em 1995, mas foi atualizada ao longo dos anos.\nEm comparação com outras linguagens de programação, JavaScript é uma das mais fáceis de aprender, tornando-a uma boa primeira escolha.\nEssa é uma introdução aos fundamentos da programação utilizando a forma moderna dela."
 			},
 			{
 				"path": "estrutura-basica",
 				"subtitle": "Estrutura básica",
-				"content": [
-					"Para começar, vou introduzir esse pedaço de código: `console.log(100)`.",
-					"As palavras `console.log` vão aparecer diversas vezes por aqui. Você usa isso quando quiser mostar algo na tela. Mais especificamente, mostrar num tal de \"console\".",
-					"Você escolhe o que quer que apareça entre os parênteses.",
-					"Aqui, essa vai ser a única função do console, e ele vai ser representado assim: com o código na esquerda e o resultado na direita:",
-					"```console.log(100)```",
-					"Números não são a única opção para escolher. Podemos usar texto também, por exemplo. Use a caixa de texto para escolher uma palavra, ou mais de uma:",
-					"```console.log($TEXT)```",
-					"Lembrando que o código na esquerda gera o resultado na direita.",
-					"Você pode ter percebido que eu coloquei aspas no exemplo anterior, as aspas são usadas no começo e fim de pedaços de texto.",
-					"Aqui o console mostra as aspas também, mas em outros lugares pode não mostrar.",
-					"Um valor de texto é chamado pelo nome inglês **_\"string\"_**. Nos códigos daqui eles vão aparecer em laranja.",
-					"São usadas linhas diferentes para cada instrução.",
-					"```console.log(\"Saudações\")\nconsole.log(-5)```",
-					"###Comentários",
-					"Duas barras `//` representam o começo de um comentário, que faz o resto da linha ser ignorada completamente na hora da execução.",
-					"Comentários vão ficar em cinza.",
-					"```// Este é um comentário, senhor```"
-				]
+				"content": "Para começar, vou introduzir esse pedaço de código: `console.log(100)`.\nAs palavras `console.log` vão aparecer diversas vezes por aqui. Você usa isso quando quiser mostar algo na tela. Mais especificamente, mostrar num tal de \"console\".\nVocê escolhe o que quer que apareça entre os parênteses.\nAqui, essa vai ser a única função do console, e ele vai ser representado assim: com o código na esquerda e o resultado na direita:\n```console.log(100)```\nNúmeros não são a única opção para escolher. Podemos usar texto também, por exemplo. Use a caixa de texto para escolher uma palavra, ou mais de uma:\n```console.log($TEXT)```\nLembrando que o código na esquerda gera o resultado na direita.\nVocê pode ter percebido que eu coloquei aspas no exemplo anterior, as aspas são usadas no começo e fim de pedaços de texto.\nAqui o console mostra as aspas também, mas em outros lugares pode não mostrar.\nUm valor de texto é chamado pelo nome inglês **_\"string\"_**. Nos códigos daqui eles vão aparecer em laranja.\nSão usadas linhas diferentes para cada instrução.\n```console.log(\"Saudações\")\nconsole.log(-5)```\n###Comentários\nDuas barras `//` representam o começo de um comentário, que faz o resto da linha ser ignorada completamente na hora da execução.\nComentários vão ficar em cinza.\n```// Este é um comentário, senhor```"
 			},
 			{
 				"path": "variaveis",
 				"subtitle": "Variáveis",
-				"content": [
-					"Variáveis são o conceito básico mais importante. Elas funcionam como caixas de informações, você armazena alguma coisa nela e pode retirar o que tem dentro depois.",
-					"Para criar uma variável você usa a palavra especial `let` e precisa dar um nome para ela:",
-					"```let nome```",
-					"Fazer isso recebe o nome de **\"declarar\"** uma variável.",
-					"É importante notar que esse nome não pode conter espaços. Se você quiser mais de uma palavra no nome, em vez de espaços é comum juntarAsPalavrasDesseJeito.",
-					"```let nomeMaisLongo```",
-					"Para fazer a variável útil é preciso dar um valor para ela.",
-					"Esse valor pode ser por exemplo um número, uma letra, uma palavra, uma frase, o dicionário todo...",
-					"```let numero = 15\nlet fantasmasAtrasDeVoce = 1\nlet contaBancaria = -10.45\n// Também não é recomendado usar acentos no nome```",
-					"Usa-se um ponto em vez de uma vírgula para números quebrados.",
-					"Quando você quiser colocar uma _string_ numa variável, novamente, precisa usar aspas.",
-					"```let professor = \"Girafales\"\nlet frase = \"Você vem sempre aqui?\"```",
-					"O símbolo de igual aqui pode parecer meio estranho, ele só representa a ação de colocar um valor numa variável, na esquerda do igual fica o nome dela e na direita o valor.",
-					"Depois de criar uma, pode mudar o valor dela de acordo com a segunda linha de código abaixo:",
-					"```let saudacao = \"Bom dia, boa tarde, boa noite.\"\nsaudacao = \"Saudações, terráqueos! Eu venho em paz.\"```",
-					"Como a função do `let` é só declarar (criar) variáveis, não reapareceu na segunda linha.",
-					"No lugar de `let`, você também pode usar `const`. A diferença é que uma variável criada com `const` não pode ser alterada mais.",
-					"```const sentidoDaVida = 42```",
-					"Para ver o valor da variável, o `console.log()` de antes voltou.",
-					"```let importante = $NUMBER\nconsole.log(importante)```",
-					"No lugar do número ou palavra de antes você coloca o nome da variável. ",
-					"Não só nesse caso, mas **em qualquer lugar que você pode usar um número, você também pode usar uma variável de número**.",
-					"O mesmo vale para outros tipos de variável."
-				]
+				"content": "Variáveis são o conceito básico mais importante. Elas funcionam como caixas de informações, você armazena alguma coisa nela e pode retirar o que tem dentro depois.\nPara criar uma variável você usa a palavra especial `let` e precisa dar um nome para ela:\n```let nome```\nFazer isso recebe o nome de **\"declarar\"** uma variável.\nÉ importante notar que esse nome não pode conter espaços. Se você quiser mais de uma palavra no nome, em vez de espaços é comum juntarAsPalavrasDesseJeito.\n```let nomeMaisLongo```\nPara fazer a variável útil é preciso dar um valor para ela.\nEsse valor pode ser por exemplo um número, uma letra, uma palavra, uma frase, o dicionário todo...\n```let numero = 15\nlet fantasmasAtrasDeVoce = 1\nlet contaBancaria = -10.45\n// Também não é recomendado usar acentos no nome```\nUsa-se um ponto em vez de uma vírgula para números quebrados.\nQuando você quiser colocar uma _string_ numa variável, novamente, precisa usar aspas.\n```let professor = \"Girafales\"\nlet frase = \"Você vem sempre aqui?\"```\nO símbolo de igual aqui pode parecer meio estranho, ele só representa a ação de colocar um valor numa variável, na esquerda do igual fica o nome dela e na direita o valor.\nDepois de criar uma, pode mudar o valor dela de acordo com a segunda linha de código abaixo:\n```let saudacao = \"Bom dia, boa tarde, boa noite.\"\nsaudacao = \"Saudações, terráqueos! Eu venho em paz.\"```\nComo a função do `let` é só declarar (criar) variáveis, não reapareceu na segunda linha.\nNo lugar de `let`, você também pode usar `const`. A diferença é que uma variável criada com `const` não pode ser alterada mais.\n```const sentidoDaVida = 42```\nPara ver o valor da variável, o `console.log()` de antes voltou.\n```let importante = $NUMBER\nconsole.log(importante)```\nNo lugar do número ou palavra de antes você coloca o nome da variável. \nNão só nesse caso, mas **em qualquer lugar que você pode usar um número, você também pode usar uma variável de número**.\nO mesmo vale para outros tipos de variável."
 			},
 			{
 				"path": "operacoes-matematicas",
 				"subtitle": "Operações matemáticas",
-				"content": [
-					"Em código, existem as operações matemáticas básicas.",
-					"```console.log(2 + 2)\nconsole.log(18 - 5)```",
-					"O resultado das operações pode ser colocado numa variável:",
-					"```let resultado = 6 * 4\nconsole.log(resultado)```",
-					"Ou pode ser obtido de uma variável:",
-					"```let valorInicial = 38\nconsole.log(valorInicial / 2)```",
-					"Ou os dois ao mesmo tempo. No geral, qualquer lugar que aceita um número também aceita uma operação matemática.",
-					"```let numero = 68\nnumero = numero + 1\nconsole.log(numero)```",
-					"Esse `numero = numero + 1` no meio do código acima é uma ideia importante e vai voltar no futuro. Ele aumenta a variável em 1, o processo é assim:",
-					"`numero = numero + 1`",
-					"`numero = 68 + 1`\t\t<< valor 68 é extraído",
-					"`numero = 69`\t\t<< valor 69 é atribuído",
-					"\nSimilarmente `numero = numero * 2` dobraria o valor.",
-					"Expressões com mais de uma operação também são possíveis. Elas usam a mesma ordem do que a matemática: multiplicação e divisão primeiro, depois soma e subtração.",
-					"```console.log(1 + 3 * 3)```",
-					"```console.log((1 + 3) * 3) // parênteses também afetam a ordem```",
-					"Por último, o símbolo de mais também combina _strings_:",
-					"```console.log(\"o\" + \"i\")```",
-					"\nDê uma olhada no código a seguir:",
-					"```*let frase = \"Olá,\"\nfrase = frase + \"Mundo\"\nfrase + \"!\"\nconsole.log(frase)```",
-					"O que vai aparecer no console quando for executado?",
-					"|`\"Olá, Mundo!\"`|`\"Olá,Mundo!\"`|`\"Olá, Mundo\"`|*`\"Olá,Mundo\"`|Espaços **não** são inseridos automaticamente entre palavras. A terceira linha de código não faz nada pois é preciso um sinal de igual para alterar a variável."
-				]
+				"content": "Em código, existem as operações matemáticas básicas.\n```console.log(2 + 2)\nconsole.log(18 - 5)```\nO resultado das operações pode ser colocado numa variável:\n```let resultado = 6 * 4\nconsole.log(resultado)```\nOu pode ser obtido de uma variável:\n```let valorInicial = 38\nconsole.log(valorInicial / 2)```\nOu os dois ao mesmo tempo. No geral, qualquer lugar que aceita um número também aceita uma operação matemática.\n```let numero = 68\nnumero = numero + 1\nconsole.log(numero)```\nEsse `numero = numero + 1` no meio do código acima é uma ideia importante e vai voltar no futuro. Ele aumenta a variável em 1, o processo é assim:\n`numero = numero + 1`\n`numero = 68 + 1`\t\t<< valor 68 é extraído\n`numero = 69`\t\t<< valor 69 é atribuído\nSimilarmente, `numero = numero * 2` dobraria o valor.\n\nExpressões com mais de uma operação também são possíveis. Elas usam a mesma ordem do que a matemática: multiplicação e divisão primeiro, depois soma e subtração.\n```console.log(1 + 3 * 3)```\n```console.log((1 + 3) * 3) // parênteses também afetam a ordem```\nPor último, o símbolo de mais também combina _strings_:\n```console.log(\"o\" + \"i\")```\n\nDê uma olhada no código a seguir:\n```*let frase = \"Olá,\"\nfrase = frase + \"Mundo\"\nfrase + \"!\"\nconsole.log(frase)```\nO que vai aparecer no console quando for executado?\n|`\"Olá, Mundo!\"`|`\"Olá,Mundo!\"`|`\"Olá, Mundo\"`|*`\"Olá,Mundo\"`|Espaços **não** são inseridos automaticamente entre palavras. A terceira linha de código não faz nada pois é preciso um sinal de igual para alterar a variável."
 			}
 		]
 	},
@@ -102,72 +32,22 @@
 			{
 				"path": "criando-uma-lista",
 				"subtitle": "Criando uma lista",
-				"content": [
-					"Listas são uma maneira de agregar informações. Uma lista também pode ser chamada de \"vetor\", ou por seu nome em inglês, _\"Array\"_. Uma lista é criada com [colchetes] e vírgulas:",
-					"```let minhaListaDeCompras = [\"pão\", \"leite\", \"arroz\", \"50 litros de ácido sulfúrico\", \"queijo\"]```",
-					"Uma lista pode conter qualquer coisa que uma variável pode.",
-					"```let numeros = [0, 1, 2, 3, 4, 5]\n// e pode misturar coisas, mas isso não é tão comum\nlet listaMisturada = [6.5, \"alface\", -10]```",
-					"Pode conter a mesma coisa mais de uma vez:",
-					"```let listaDeComprasMelhor = [\"pão\", \"leite\", \"arroz\", \"leite\", \"queijo\", \"leite\", \"leite\"]```",
-					"Pode ainda não conter nada:",
-					"```let politicosHonestos = []```",
-					"Para saber quantas coisas estão numa lista usamos `.length`:",
-					"```let lista = [55, 44, 33, 22, 11]\nconsole.log(lista.length)```",
-					"A palavra _**length**_ é inglês para comprimento. Ela também funciona para descobrir o tamanho de uma _string_.",
-					"```console.log(\"abcdefghijklmnopqrstuvwxyz\".length)```",
-					"```console.log(\"\".length)```",
-					"Do mesmo jeito que listas podem ser vazias, `\"\"` é uma string vazia.",
-					"Listas e strings vazias têm um comprimento/tamanho de 0."
-				]
+				"content": "Listas são uma maneira de agregar informações. Uma lista também pode ser chamada de \"vetor\", ou por seu nome em inglês, _\"Array\"_. Uma lista é criada com [colchetes] e vírgulas:\n```let minhaListaDeCompras = [\"pão\", \"leite\", \"arroz\", \"50 litros de ácido sulfúrico\", \"queijo\"]```\nUma lista pode conter qualquer coisa que uma variável pode.\n```let numeros = [0, 1, 2, 3, 4, 5]\n// e pode misturar coisas, mas isso não é tão comum\nlet listaMisturada = [6.5, \"alface\", -10]```\nPode conter a mesma coisa mais de uma vez:\n```let listaDeComprasMelhor = [\"pão\", \"leite\", \"arroz\", \"leite\", \"queijo\", \"leite\", \"leite\"]```\nPode ainda não conter nada:\n```let politicosHonestos = []```\nPara saber quantas coisas estão numa lista usamos `.length`:\n```let lista = [55, 44, 33, 22, 11]\nconsole.log(lista.length)```\nA palavra _**length**_ é inglês para comprimento. Ela também funciona para descobrir o tamanho de uma _string_.\n```console.log(\"abcdefghijklmnopqrstuvwxyz\".length)```\n```console.log(\"\".length)```\nDo mesmo jeito que listas podem ser vazias, `\"\"` é uma string vazia.\nListas e strings vazias têm um comprimento/tamanho de 0."
 			},
 			{
 				"path": "acesso",
 				"subtitle": "Acesso",
-				"content": [
-					"Para acessar itens individuais de uma lista você usa os colchetes de novo, e coloca dentro a posição.",
-					"Cada posição é um número diferente, **começando do 0**! O número da posição é chamado de **índice**.",
-					"```let numeros = [2, 4, 8, 16]\nconsole.log(numeros[0])\nconsole.log(numeros[2])```",
-					"O mesmo truque funciona para extrair caracterers individuais de uma string.",
-					"Espaços são caracteres também. Novamente a primeira letra fica na posição 0.",
-					"```let frase = \"Calma, tudo passa. Nem que seja por cima de você.\"\nconsole.log(frase[$NUMBER])```",
-					"Enquanto escolhia um número, você pode ter se deparado com o resultado `undefined`.",
-					"Ele significa **\"indefinido\"**, e aparece se escolher um número muito grande, ou um número negativo, ou um número não inteiro, pois esses números não são posições válidas.",
-					"Lembrando que onde encaixa um número encaixa uma variável de número:",
-					"```let lista = [1, 2, 4, 8, 16, 32, 64]\nlet indice = 1\nconsole.log(lista[indice])\nconsole.log(lista[2 + 2]) // e uma operação também```",
-					"\nQual o resultado do código abaixo?",
-					"```*let string = \"98765-4321\"\nconsole.log(string[string.length - 1])```",
-					"|`undefined`|*`\"1\"`|`\"2\"`|`\"9\"`|O tamanho da string é 10, então o resultado é o mesmo que `string[10 - 1]`. Começando do 0, o caractere na posição 9 é o último. As aspas ainda aparecem porque o 1 é parte de uma string, então tem a função de caractere."
-				]
+				"content": "Para acessar itens individuais de uma lista você usa os colchetes de novo, e coloca dentro a posição.\nCada posição é um número diferente, **começando do 0**! O número da posição é chamado de **índice**.\n```let numeros = [2, 4, 8, 16]\nconsole.log(numeros[0])\nconsole.log(numeros[2])```\nO mesmo truque funciona para extrair caracterers individuais de uma string.\nEspaços são caracteres também. Novamente a primeira letra fica na posição 0.\n```let frase = \"Calma, tudo passa. Nem que seja por cima de você.\"\nconsole.log(frase[$NUMBER])```\nEnquanto escolhia um número, você pode ter se deparado com o resultado `undefined`.\nEle significa **\"indefinido\"**, e aparece se escolher um número muito grande, ou um número negativo, ou um número não inteiro, pois esses números não são posições válidas.\nLembrando que onde encaixa um número encaixa uma variável de número:\n```let lista = [1, 2, 4, 8, 16, 32, 64]\nlet indice = 1\nconsole.log(lista[indice])\nconsole.log(lista[2 + 2]) // e uma operação também```\n\nQual o resultado do código abaixo?\n```*let string = \"98765-4321\"\nconsole.log(string[string.length - 1])```\n|`undefined`|*`\"1\"`|`\"2\"`|`\"9\"`|O tamanho da string é 10, então o resultado é o mesmo que `string[10 - 1]`. Começando do 0, o caractere na posição 9 é o último. As aspas ainda aparecem porque o 1 é parte de uma string, então tem a função de caractere."
 			},
 			{
 				"path": "at",
 				"subtitle": ".at( )",
-				"content": [
-					"O código anterior sempre resulta no último caractere de uma string, ou no último item de uma lista.",
-					"```let string = $TEXT\nconsole.log(string[string.length - 1])```",
-					"É comum fazer este tipo de coisa, mas existe um jeito mais simples:",
-					"```let ultimo = [4, 0, 0, 2, 8, 9, 2, 2].at(-1)\nconsole.log(ultimo)```",
-					"`.at()` acessa elementos da lista assim como o `[]`.",
-					"Funcionam iguais com números positivos, mas além disso, `.at()` permite usar números negativos para buscar itens no final: -1 é o último item, -2 é o penúltimo, -3 é o antepenúltimo...",
-					"```let frase = \"Calma, tudo passa. Nem que seja por cima de você.\"\nconsole.log(frase.at($NUMBER))```"
-				]
+				"content": "O código anterior sempre resulta no último caractere de uma string, ou no último item de uma lista.\n```let string = $TEXT\nconsole.log(string[string.length - 1])```\nÉ comum fazer este tipo de coisa, mas existe um jeito mais simples:\n```let ultimo = [4, 0, 0, 2, 8, 9, 2, 2].at(-1)\nconsole.log(ultimo)```\n`.at()` acessa elementos da lista assim como o `[]`.\nFuncionam iguais com números positivos, mas além disso, `.at()` permite usar números negativos para buscar itens no final: -1 é o último item, -2 é o penúltimo, -3 é o antepenúltimo...\n```let frase = \"Calma, tudo passa. Nem que seja por cima de você.\"\nconsole.log(frase.at($NUMBER))```"
 			},
 			{
 				"path": "modificando",
 				"subtitle": "Modificando",
-				"content": [
-					"Para alterar listas depois que elas forem criadas, temos uma variedade de opções.",
-					"Primeiramente, além de acessar, colchetes são usados para substituir itens em listas.",
-					"```let lista = [\"a\", \"b\", \"c\", \"d\"]\nlista[0] = \"e\"\nconsole.log(lista)```",
-					"Listas podem ser aumentadas com as operações `.push()` e `.unshift()`:",
-					"```let lista = [2, 4, 8, 16, 32]\nlista.push(16 * 2) // adiciona ao final\nlista.unshift(1) // adiciona ao começo\nconsole.log(lista)```",
-					"Dessa vez o símbolo de igual não é usado.",
-					"Também é possível adicionar mais de um item por vez com essas operações:",
-					"```let animais = [\"bicho-preguiça\"]\nanimais.push(\"diabo da tasmânia\", \"axolote\")\nanimais.unshift(\"ornitorrinco\", \"peixe-bolha\", \"capivara\")\nconsole.log(animais)```",
-					"Para remover itens de uma listam, existem `.pop()` e `.shift()`.",
-					"O item removido acaba sendo o resultado, isso quer dizer que a operação pode ser usada no lugar de outros valores:",
-					"```let lista = [1, 1, 2, 3, 5, 8, 13]\nlet ultimo = lista.pop() // remove do final\nlet primeiro = lista.shift() // remove do começo\nconsole.log(lista)\nconsole.log(ultimo)\nconsole.log(primeiro)```"
-				]
+				"content": "Para alterar listas depois que elas forem criadas, temos uma variedade de opções.\nPrimeiramente, além de acessar, colchetes são usados para substituir itens em listas.\n```let lista = [\"a\", \"b\", \"c\", \"d\"]\nlista[0] = \"e\"\nconsole.log(lista)```\nListas podem ser aumentadas com as operações `.push()` e `.unshift()`:\n```let lista = [2, 4, 8, 16, 32]\nlista.push(16 * 2) // adiciona ao final\nlista.unshift(1) // adiciona ao começo\nconsole.log(lista)```\nDessa vez o símbolo de igual não é usado.\nTambém é possível adicionar mais de um item por vez com essas operações:\n```let animais = [\"bicho-preguiça\"]\nanimais.push(\"diabo da tasmânia\", \"axolote\")\nanimais.unshift(\"ornitorrinco\", \"peixe-bolha\", \"capivara\")\nconsole.log(animais)```\nPara remover itens de uma listam, existem `.pop()` e `.shift()`.\nO item removido acaba sendo o resultado, isso quer dizer que a operação pode ser usada no lugar de outros valores:\n```let lista = [1, 1, 2, 3, 5, 8, 13]\nlet ultimo = lista.pop() // remove do final\nlet primeiro = lista.shift() // remove do começo\nconsole.log(lista)\nconsole.log(ultimo)\nconsole.log(primeiro)```"
 			}
 		]
 	},
@@ -178,108 +58,22 @@
 			{
 				"path": "condicoes",
 				"subtitle": "Condições",
-				"content": [
-					"Por enquanto todo o código aqui foi executado, mas frequentemente, você precisa que um pedaço do código só aconteça às vezes.",
-					"Introduzindo, `if`:",
-					"```if (10 > 5) {\n\tconsole.log(\"Executei!\")\n}```",
-					"```if (10 < 5) {\n\tconsole.log(\"Executei!\")\n}```",
-					"O segundo não era para fazer nada mesmo. A palavra `if` significa \"se\", em inglês, e usando ela podemos definir código que só é executado às vezes.",
-					"O primeiro bloco executa porque `10 > 5` é verdadeiro. O símbolo `>` é chamado de \"maior do que\".",
-					"O resultado dele é verdadeiro **se** o primeiro número é **maior do que** o segundo.",
-					"```console.log(10 > 5) // true significa verdadeiro\nconsole.log(0 > 1) // false significa falso```",
-					"O símbolo `<` é o oposto, ele se chama \"menor do que\".",
-					"```console.log(10 < 5) // 10 não é menor do que 5\nconsole.log(0 < 1) // 0 é menor do que 1```",
-					"Para checar se os números são iguais, usa-se o símbolo `===`. Cuide para não confundir com o `=` que só define variáveis.",
-					"Já o símbolo `!==` é o oposto, checa se os números são diferentes.",
-					"```console.log(3 === 3)\nconsole.log(3 !== 3)```",
-					"Há variações dos símbolos `>` e `<` que também permitem que os números sejam iguais:",
-					"```console.log(6 >= 4) // maior ou igual\nconsole.log(4 >= 4)```",
-					"```console.log(-5 <= -5) // menor ou igual\nconsole.log(3 <= -5)```",
-					"`===` e `!==` também funcionam com strings:",
-					"```console.log(\"biscoito\" === \"bolacha\")\nconsole.log(\"🍪\" === \"🍪\")```",
-					"O `if` usa {chaves} para definir um **bloco de código**.",
-					"O espaço em branco no começo das linhas deixa mais fácil de ver que parte do código está dentro do bloco.",
-					"```let numero = $NUMBER\nif (numero >= 0) {\n\tconsole.log(\"positivo ou zero\")\n} else {\n\tconsole.log(\"negativo\")\n}```",
-					"Já esse `else` é uma adição opcional. O bloco de código dele executa quando o `if` falhar. Volte aos primeiros exemplos da página pra garantir que entendeu o que aconteceu.",
-					"E finalmente, `true` e `false` podem ser usados como valores de variável:",
-					"```const verdadeiro = true\nif (verdadeiro) {\n\tconsole.log(\"sim\")\n}```"
-				]
+				"content": "Por enquanto todo o código aqui foi executado, mas frequentemente, você precisa que um pedaço do código só aconteça às vezes.\nIntroduzindo, `if`:\n```if (10 > 5) {\n\tconsole.log(\"Executei!\")\n}```\n```if (10 < 5) {\n\tconsole.log(\"Executei!\")\n}```\nO segundo não era para fazer nada mesmo. A palavra `if` significa \"se\", em inglês, e usando ela podemos definir código que só é executado às vezes.\nO primeiro bloco executa porque `10 > 5` é verdadeiro. O símbolo `>` é chamado de \"maior do que\".\nO resultado dele é verdadeiro **se** o primeiro número é **maior do que** o segundo.\n```console.log(10 > 5) // true significa verdadeiro\nconsole.log(0 > 1) // false significa falso```\nO símbolo `<` é o oposto, ele se chama \"menor do que\".\n```console.log(10 < 5) // 10 não é menor do que 5\nconsole.log(0 < 1) // 0 é menor do que 1```\nPara checar se os números são iguais, usa-se o símbolo `===`. Cuide para não confundir com o `=` que só define variáveis.\nJá o símbolo `!==` é o oposto, checa se os números são diferentes.\n```console.log(3 === 3)\nconsole.log(3 !== 3)```\nHá variações dos símbolos `>` e `<` que também permitem que os números sejam iguais:\n```console.log(6 >= 4) // maior ou igual\nconsole.log(4 >= 4)```\n```console.log(-5 <= -5) // menor ou igual\nconsole.log(3 <= -5)```\n`===` e `!==` também funcionam com strings:\n```console.log(\"biscoito\" === \"bolacha\")\nconsole.log(\"🍪\" === \"🍪\")```\nO `if` usa {chaves} para definir um **bloco de código**.\nO espaço em branco no começo das linhas deixa mais fácil de ver que parte do código está dentro do bloco.\n```let numero = $NUMBER\nif (numero >= 0) {\n\tconsole.log(\"positivo ou zero\")\n} else {\n\tconsole.log(\"negativo\")\n}```\nJá esse `else` é uma adição opcional. O bloco de código dele executa quando o `if` falhar. Volte aos primeiros exemplos da página pra garantir que entendeu o que aconteceu.\nE finalmente, `true` e `false` podem ser usados como valores de variável:\n```const verdadeiro = true\nif (verdadeiro) {\n\tconsole.log(\"sim\")\n}```"
 			},
 			{
 				"path": "numeros-e-strings",
 				"subtitle": "Números e strings",
-				"content": [
-					"Todo valor possui um tipo associado a ele. Você já viu números, strings, listas.",
-					"Há uma distinção importante entre números e strings.",
-					"```const um = 1 // número\nconst uno = \"1\" // string```",
-					"Anteriormente, houve um caso em que acessar um caractere de uma string resultou em um número armazenado como string.",
-					"Esse exemplo é parecido, o `\"1\"` é uma string por causa das aspas.",
-					"Os dois valores acima não são idênticos.",
-					"```console.log(1 === \"1\")```",
-					"Tentar fazer somas usando strings assim causa problemas:",
-					"```console.log(\"4\" + 2 + 0)```",
-					"Em vez de somar os números, a funcionalidade de juntar strings do `+` que ocorreu.",
-					"Nesse processo, o `2` e o `0` foram convertidos em strings implicitamente. Para consertar isso, convertemos o `\"4\"` para número assim:",
-					"```console.log(Number(\"4\") + 2 + 0)```",
-					"De forma mais geral, `Number()` converte para número, `String()` para string.",
-					"```console.log(String(13))\nconsole.log(String(true))\nconsole.log(String(\"Chinforinfola\"))\nconsole.log(Number(\"-1.50\"))```",
-					"```console.log(Number($TEXT))```",
-					"Tentou colocar algo que não seja um número no campo de texto? **⬆**",
-					"O resultado acaba sendo um tal de `NaN`.",
-					"`NaN` é um acrônimo para _\"Not a Number\"_, que significa \"não é um número\", em inglês. Até porque \"abacaxi\" não é um número.",
-					"```console.log(Number(\"1️⃣\")) // 1️⃣ também não é número\nconsole.log(Number(\"\")) // Mas aparentemente nada é```",
-					"Outro jeito de converter de número para string é usando `.toFixed()`:",
-					"```let numero = 6.54321\nconsole.log(numero.toFixed(3))```",
-					"Essa é outra daquelas funções que vão atrás do valor.",
-					"O número dentro dos parênteses define quantas casas aparecem depois da vírgula. Colocar um `0` aí arredonda o número para inteiro.",
-					"```let inteiro = (9.4).toFixed(0)\n// é necesário () em volta do número para usar .toFixed() diretamente\nconsole.log(inteiro)```",
-					"Arredondamento para cima também acontece.",
-					"```console.log((9.6).toFixed(0))\nconsole.log((6.66666).toFixed(4))```",
-					"E preenche com 0 para ficar do tamanho correto.",
-					"```let reais = $NUMBER\nconsole.log(\"R$\" + reais.toFixed(2))```"
-				]
+				"content": "Todo valor possui um tipo associado a ele. Você já viu números, strings, listas.\nHá uma distinção importante entre números e strings.\n```const um = 1 // número\nconst uno = \"1\" // string```\nAnteriormente, houve um caso em que acessar um caractere de uma string resultou em um número armazenado como string.\nEsse exemplo é parecido, o `\"1\"` é uma string por causa das aspas.\nOs dois valores acima não são idênticos.\n```console.log(1 === \"1\")```\nTentar fazer somas usando strings assim causa problemas:\n```console.log(\"4\" + 2 + 0)```\nEm vez de somar os números, a funcionalidade de juntar strings do `+` que ocorreu.\nNesse processo, o `2` e o `0` foram convertidos em strings implicitamente. Para consertar isso, convertemos o `\"4\"` para número assim:\n```console.log(Number(\"4\") + 2 + 0)```\nDe forma mais geral, `Number()` converte para número, `String()` para string.\n```console.log(String(13))\nconsole.log(String(true))\nconsole.log(String(\"Chinforinfola\"))\nconsole.log(Number(\"-1.50\"))```\n```console.log(Number($TEXT))```\nTentou colocar algo que não seja um número no campo de texto? **⬆**\nO resultado acaba sendo um tal de `NaN`.\n`NaN` é um acrônimo para _\"Not a Number\"_, que significa \"não é um número\", em inglês. Até porque \"abacaxi\" não é um número.\n```console.log(Number(\"1️⃣\")) // 1️⃣ também não é número\nconsole.log(Number(\"\")) // Mas aparentemente nada é```\nOutro jeito de converter de número para string é usando `.toFixed()`:\n```let numero = 6.54321\nconsole.log(numero.toFixed(3))```\nEssa é outra daquelas funções que vão atrás do valor.\nO número dentro dos parênteses define quantas casas aparecem depois da vírgula. Colocar um `0` aí arredonda o número para inteiro.\n```let inteiro = (9.4).toFixed(0)\n// é necesário () em volta do número para usar .toFixed() diretamente\nconsole.log(inteiro)```\nArredondamento para cima também acontece.\n```console.log((9.6).toFixed(0))\nconsole.log((6.66666).toFixed(4))```\nE preenche com 0 para ficar do tamanho correto.\n```let reais = $NUMBER\nconsole.log(\"R$\" + reais.toFixed(2))```"
 			},
 			{
 				"path": "mais-tipos",
 				"subtitle": "Mais tipos",
-				"content": [
-					"Para descobrir o tipo de um valor usa-se o `typeof`.",
-					"```console.log(typeof \"3.14\")\nconsole.log(typeof Number(\"3.14\"))```",
-					"Além de números e strings, você viu também verdadeiro e falso, esses são do tipo _boolean_.",
-					"```console.log(typeof true)\nconsole.log(typeof false)```",
-					"Listas resultam no tipo de _objeto_.",
-					"```console.log(typeof [])```",
-					"O tipo de objeto é algo mais abrangente do que só lista. Mesmo asism, falar que são listas ainda é mais específico e adequado. O nome real do tipo lista é _Array_, como mencionado antes.",
-					"Já `undefined` é o seu próprio tipo:",
-					"```console.log(typeof undefined)```",
-					"E apesar de `NaN` não ser um número, ele é um número:",
-					"```console.log(typeof NaN)```",
-					"🙃"
-				]
+				"content": "Para descobrir o tipo de um valor usa-se o `typeof`.\n```console.log(typeof \"3.14\")\nconsole.log(typeof Number(\"3.14\"))```\nAlém de números e strings, você viu também verdadeiro e falso, esses são do tipo _boolean_.\n```console.log(typeof true)\nconsole.log(typeof false)```\nListas resultam no tipo de _objeto_.\n```console.log(typeof [])```\nO tipo de objeto é algo mais abrangente do que só lista. Mesmo asism, falar que são listas ainda é mais específico e adequado. O nome real do tipo lista é _Array_, como mencionado antes.\nJá `undefined` é o seu próprio tipo:\n```console.log(typeof undefined)```\nE apesar de `NaN` não ser um número, ele é um número:\n```console.log(typeof NaN)```\n🙃"
 			},
 			{
 				"path": "convertendo-listas",
 				"subtitle": "Convertendo listas",
-				"content": [
-					"###De lista para string",
-					"O jeito principal de converter uma lista para uma string é usando `.join()`.",
-					"```console.log([4, 8, 15, 16, 23, 42].join())```",
-					"Ele junta os itens da lista e usa vírgulas para separar eles. No lugar das vírgulas, um separador pode ser definido.",
-					"```console.log([1, \"1\", 1, \"1\"].join(\"/\"))\nconsole.log([2, 3, 5, 7, 11].join(\" - \"))```",
-					"Uma string vazia `\"\"` efetivamente junta sem um separador.",
-					"```console.log([\":\", \"\", \"/\"].join(\"\"))```",
-					"A função `String()` pode ser usada aqui também. Ela separa os itens por vírgulas, o mesmo que a versão vazia do `.join()`.",
-					"```console.log(String([\"🐍\", \"🚬\"]))```",
-					"###De string para lista",
-					"Para criar uma lista a partir de uma string, usa-se `.split()`.",
-					"```let string = \"Defenestrar-te-ei!\"\nconsole.log(string.split(\"-\"))```",
-					"É o oposto do `.join()`: divide a string toda vez que encontrar o separador determinado entre os parênteses.",
-					"```console.log(\"->1->2->3->4\".split(\"->\"))```",
-					"No próximo exemplo, `\" \"` é uma string que contém apenas um espaço.",
-					"```console.log(\"Achei que fosse impossível, mas quando fui tentar, descobri que era mesmo.\".split(\" \"))```",
-					"Uma string vazia como separador divide em caracteres individuais.",
-					"```console.log($TEXT.split(\"\"))```"
-				]
+				"content": "###De lista para string\nO jeito principal de converter uma lista para uma string é usando `.join()`.\n```console.log([4, 8, 15, 16, 23, 42].join())```\nEle junta os itens da lista e usa vírgulas para separar eles. No lugar das vírgulas, um separador pode ser definido.\n```console.log([1, \"1\", 1, \"1\"].join(\"/\"))\nconsole.log([2, 3, 5, 7, 11].join(\" - \"))```\nUma string vazia `\"\"` efetivamente junta sem um separador.\n```console.log([\":\", \"\", \"/\"].join(\"\"))```\nA função `String()` pode ser usada aqui também. Ela separa os itens por vírgulas, o mesmo que a versão vazia do `.join()`.\n```console.log(String([\"🐍\", \"🚬\"]))```\n###De string para lista\nPara criar uma lista a partir de uma string, usa-se `.split()`.\n```let string = \"Defenestrar-te-ei!\"\nconsole.log(string.split(\"-\"))```\nÉ o oposto do `.join()`: divide a string toda vez que encontrar o separador determinado entre os parênteses.\n```console.log(\"->1->2->3->4\".split(\"->\"))```\nNo próximo exemplo, `\" \"` é uma string que contém apenas um espaço.\n```console.log(\"Achei que fosse impossível, mas quando fui tentar, descobri que era mesmo.\".split(\" \"))```\nUma string vazia como separador divide em caracteres individuais.\n```console.log($TEXT.split(\"\"))```"
 			}
 		]
 	},
@@ -290,70 +84,17 @@
 			{
 				"path": "de-novo",
 				"subtitle": "De novo!",
-				"content": [
-					"Digamos que você tem uma lista de preços e quer descobrir o total dela. Como faria?",
-					"```let precos = [24.99, 9.99, 11.99, 69.90]```",
-					"Talvez assim:",
-					"```let precos = [24.99, 9.99, 11.99, 69.90]\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3])```",
-					"Funcionou. Mas o que acontece se vc decidir que quer comprar mais alguma coisa?",
-					"```let precos = [24.99, 9.99, 11.99, 69.90]\nprecos.push(8.50)\nconsole.log(precos)\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3])```",
-					"Agora tem uma coisa a mais na lista, mas o resultado foi o mesmo. :(",
-					"É claro que dá para adaptar o código:",
-					"```let precos = [24.99, 9.99, 11.99, 69.90]\nprecos.push(8.50)\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3] + precos[4])```",
-					"Porém seria mais conveniente se existisse um pedaço de código que funcionasse sempre.",
-					"```let precos = [24.99, 9.99, 11.99, 69.90, 8.50]\nlet total = 0\nfor (const valor of precos) {\n\ttotal = total + valor\n}\nconsole.log(total)```",
-					"Olha só, tem mesmo! Até parece que eu sabia que ele existia esse tempo todo.",
-					"Eu sei, tem muita coisa acontecendo aí. A parte essencial é essa:",
-					"```*for (const valor of precos) {\n\n}```",
-					"`for` e `of` são mais 2 palavras especiais.",
-					"Usando esse código, qualquer instrução entre as {chaves} (ou seja, no bloco de código) é repetida uma vez por item na lista.",
-					"```let letras = [\"a\", \"b\", \"c\"]\nfor (const valor of letras) {\n\t// 3 vezes\n\tconsole.log(\"De novo!\")\n}```",
-					"Esse `const valor` é algo que você já viu: esse código cria uma variável chamada valor.",
-					"Cada vez que o código interior executa, a variável criada contém um item da lista, em ordem. Você pode escolher o nome dela.",
-					"```let sequencia = [0, 1, 2, 3]\nfor (const numero of sequencia) {\n\tconsole.log(numero)\n}```",
-					"Você também já viu que `total = total + valor` soma o valor à variável total. Como esse pedaço do código está entre as chaves, ele executa com a lista toda, somando toda a lista no total.",
-					"\nVeja uma versão um pouco diferente que mostra o total sendo calculado:",
-					"```let precos = [24.99, 9.99, 11.99, 69.90, 8.50]\nlet total = 0\nfor (const valor of precos) {\n\ttotal = total + valor\n\tconsole.log(total)\n}```",
-					"E então, qual valor esse código mostra na tela?",
-					"```*let resultado = 100\nfor (const v of [40, 10, 10]) {\n\tresultado = resultado - v\n}\nconsole.log(resultado)```",
-					"|20|30|*40|60|O resultado começa em 100 e é subtraído por cada item na lista, ou seja, `100 - 40 - 10 - 10`."
-				]
+				"content": "Digamos que você tem uma lista de preços e quer descobrir o total dela. Como faria?\n```let precos = [24.99, 9.99, 11.99, 69.90]```\nTalvez assim:\n```let precos = [24.99, 9.99, 11.99, 69.90]\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3])```\nFuncionou. Mas o que acontece se vc decidir que quer comprar mais alguma coisa?\n```let precos = [24.99, 9.99, 11.99, 69.90]\nprecos.push(8.50)\nconsole.log(precos)\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3])```\nAgora tem uma coisa a mais na lista, mas o resultado foi o mesmo. :(\nÉ claro que dá para adaptar o código:\n```let precos = [24.99, 9.99, 11.99, 69.90]\nprecos.push(8.50)\nconsole.log(precos[0] + precos[1] + precos[2] + precos[3] + precos[4])```\nPorém seria mais conveniente se existisse um pedaço de código que funcionasse sempre.\n```let precos = [24.99, 9.99, 11.99, 69.90, 8.50]\nlet total = 0\nfor (const valor of precos) {\n\ttotal = total + valor\n}\nconsole.log(total)```\nOlha só, tem mesmo! Até parece que eu sabia que ele existia esse tempo todo.\nEu sei, tem muita coisa acontecendo aí. A parte essencial é essa:\n```*for (const valor of precos) {\n\n}```\n`for` e `of` são mais 2 palavras especiais.\nUsando esse código, qualquer instrução entre as {chaves} (ou seja, no bloco de código) é repetida uma vez por item na lista.\n```let letras = [\"a\", \"b\", \"c\"]\nfor (const valor of letras) {\n\t// 3 vezes\n\tconsole.log(\"De novo!\")\n}```\nEsse `const valor` é algo que você já viu: esse código cria uma variável chamada valor.\nCada vez que o código interior executa, a variável criada contém um item da lista, em ordem. Você pode escolher o nome dela.\n```let sequencia = [0, 1, 2, 3]\nfor (const numero of sequencia) {\n\tconsole.log(numero)\n}```\nVocê também já viu que `total = total + valor` soma o valor à variável total. Como esse pedaço do código está entre as chaves, ele executa com a lista toda, somando toda a lista no total.\n\nVeja uma versão um pouco diferente que mostra o total sendo calculado:\n```let precos = [24.99, 9.99, 11.99, 69.90, 8.50]\nlet total = 0\nfor (const valor of precos) {\n\ttotal = total + valor\n\tconsole.log(total)\n}```\nE então, qual valor esse código mostra na tela?\n```*let resultado = 100\nfor (const v of [40, 10, 10]) {\n\tresultado = resultado - v\n}\nconsole.log(resultado)```\n|20|30|*40|60|O resultado começa em 100 e é subtraído por cada item na lista, ou seja, `100 - 40 - 10 - 10`."
 			},
 			{
 				"path": "de-novo-de-novo",
 				"subtitle": "De novo! (de novo)",
-				"content": [
-					"Às vezes você quer fazer um pedaço do código eexecutar múltiplas vezes, mas sem nenhuma associação à uma lista.",
-					"Um jeito de fazer isso é usando a palavra-chave `while`.",
-					"```let string = $TEXT\nwhile (string.length < 20) {\n\tstring = string + \"-\"\n}\nconsole.log(string)```",
-					"É parecido com o `if` no sentido que o bloco de código é executado quando a condição for verdadeira. Mas dessa vez, ele continua sendo executado até que a condição não seja mais verdadeira. No caso anterior, hífens foram adicionados ao final da string até que ela chegasse à 20 caracteres.",
-					"Cada execução do bloco de código interno é chamada de uma **iteração**.",
-					"A condição é checada no começo de cada iteração, incluindo a primeira:",
-					"```while (1 > 2) {\n\tconsole.log(\"Nunca executa\")\n}```",
-					"Só cuide para não criar um loop infinito. Esse código abaixo vai fazer o que estiver executando ele travar:",
-					"```*while (true) {\n\tconsole.log(\"Eu sou eterno. Quando eu começar, corra, porque eu não paro mais.\")\n}```",
-					"Tanto o `for of` quanto o `while` são chamados de **estruturas de repetição**.",
-					"Existe mais uma delas..."
-				]
+				"content": "Às vezes você quer fazer um pedaço do código eexecutar múltiplas vezes, mas sem nenhuma associação à uma lista.\nUm jeito de fazer isso é usando a palavra-chave `while`.\n```let string = $TEXT\nwhile (string.length < 20) {\n\tstring = string + \"-\"\n}\nconsole.log(string)```\nÉ parecido com o `if` no sentido que o bloco de código é executado quando a condição for verdadeira. Mas dessa vez, ele continua sendo executado até que a condição não seja mais verdadeira. No caso anterior, hífens foram adicionados ao final da string até que ela chegasse à 20 caracteres.\nCada execução do bloco de código interno é chamada de uma **iteração**.\nA condição é checada no começo de cada iteração, incluindo a primeira:\n```while (1 > 2) {\n\tconsole.log(\"Nunca executa\")\n}```\nSó cuide para não criar um loop infinito. Esse código abaixo vai fazer o que estiver executando ele travar:\n```*while (true) {\n\tconsole.log(\"Eu sou eterno. Quando eu começar, corra, porque eu não paro mais.\")\n}```\nTanto o `for of` quanto o `while` são chamados de **estruturas de repetição**.\nExiste mais uma delas..."
 			},
 			{
 				"path": "mais-uma-vez",
 				"subtitle": "E mais uma vez",
-				"content": [
-					"```let repeticoes = 5\nfor (let i = 0; i < repeticoes; i++) {\n\tconsole.log(i)\n}```",
-					"Essa estrutura de repetição é chamada só de `for`.",
-					"`let i = 0` é executado uma vez antes de todo o resto, ciando a variável `i` que começa em 0. O nome de variável `i` é bem comum nesse cenário mas também pode ser alterado.",
-					"`i++` é a mesma coisa do que `i = i + 1`, acontece no final de cada iteração. O resultado é que `i` vai subindo de 1 em 1.",
-					"`i < repetições` funciona exatamente como no `while`: A condição é checada no começo de cada iteração e quando for falsa, o código vai parar de reexecutar. Nesse caso parou logo quando `i` chegou a 5, pois `5 < 5` é falso, de forma que `i` nunca teve o valor 5 dentro do bloco de código.",
-					"O `while` consegue fazer as mesmas coisas do que o `for`, porém o código fica mais diseperso. E como o `while` é mais genérico, usar `for` transmite melhor o seu objetivo. Este aqui é equivalente ao do começo da página:",
-					"```let repeticoes = 5\nlet i = 0\nwhile(i < repeticoes) {\n\tconsole.log(i)\n\ti++\n}```",
-					"Em relação ao `for of`, o `for` é mais difícil de usar, mas oferece mais liberdade. Permite modificar o valor inicial:",
-					"```for (let i = 6; i < 9; i++) {\n\tconsole.log(i)\n}```",
-					"Ainda pode ser usada com uma lista:",
-					"```let emojis = [\"😐\", \"🥶\", \"😡\", \"😱\"]\nfor (let indice = 0; indice < emojis.length; indice++) {\n\tconsole.log(emojis[indice])\n}```",
-					"E diferente de um `for of`, pode alterar uma lista:",
-					"```let documentos = [\"RG\", \"CNH\", \"Passaporte\"]\nfor (let i = 0; i < documentos.length; i++) {\n\tdocumentos[i] = false\n}\nconsole.log(documentos)```"
-				]
+				"content": "```let repeticoes = 5\nfor (let i = 0; i < repeticoes; i++) {\n\tconsole.log(i)\n}```\nEssa estrutura de repetição é chamada só de `for`.\n`let i = 0` é executado uma vez antes de todo o resto, ciando a variável `i` que começa em 0. O nome de variável `i` é bem comum nesse cenário mas também pode ser alterado.\n`i++` é a mesma coisa do que `i = i + 1`, acontece no final de cada iteração. O resultado é que `i` vai subindo de 1 em 1.\n`i < repetições` funciona exatamente como no `while`: A condição é checada no começo de cada iteração e quando for falsa, o código vai parar de reexecutar. Nesse caso parou logo quando `i` chegou a 5, pois `5 < 5` é falso, de forma que `i` nunca teve o valor 5 dentro do bloco de código.\nO `while` consegue fazer as mesmas coisas do que o `for`, porém o código fica mais diseperso. E como o `while` é mais genérico, usar `for` transmite melhor o seu objetivo. Este aqui é equivalente ao do começo da página:\n```let repeticoes = 5\nlet i = 0\nwhile(i < repeticoes) {\n\tconsole.log(i)\n\ti++\n}```\nEm relação ao `for of`, o `for` é mais difícil de usar, mas oferece mais liberdade. Permite modificar o valor inicial:\n```for (let i = 6; i < 9; i++) {\n\tconsole.log(i)\n}```\nAinda pode ser usada com uma lista:\n```let emojis = [\"😐\", \"🥶\", \"😡\", \"😱\"]\nfor (let indice = 0; indice < emojis.length; indice++) {\n\tconsole.log(emojis[indice])\n}```\nE diferente de um `for of`, pode alterar uma lista:\n```let documentos = [\"RG\", \"CNH\", \"Passaporte\"]\nfor (let i = 0; i < documentos.length; i++) {\n\tdocumentos[i] = false\n}\nconsole.log(documentos)```"
 			}
 		]
 	}

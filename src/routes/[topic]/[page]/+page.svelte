@@ -43,7 +43,7 @@
 				<h2>{subtitle}</h2>
 			</header>
 			<section>
-				<ContentDelegator contentFragments={pageContent} />
+				<ContentDelegator content={pageContent} />
 			</section>
 		</article>
 		<PrevNextButtons {previousPagePath} {nextPagePath} />

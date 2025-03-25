@@ -15,7 +15,7 @@ export function findPageContents(path: string) {
 	return {
 		title: topicData.title,
 		subtitle: pageData.subtitle,
-		content: pageData.content as readonly string[],
+		content: pageData.content,
 	};
 }
 

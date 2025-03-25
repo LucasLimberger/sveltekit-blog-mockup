@@ -1,27 +1,40 @@
 <script lang="ts">
+	import tokenize from "$lib/scripts/tokenize";
 	import TextFormatter from "./content-components/TextFormatter.svelte";
 	import CodeBlock from "./content-components/CodeBlock.svelte";
 	import InteractableCodeBlock from "./content-components/InteractableCodeBlock.svelte";
 	import Question from "./content-components/Question.svelte";
 
-	type Props = { contentFragments: readonly string[] };
-	const { contentFragments }: Props = $props();
+	type Props = { content: string };
+	const { content }: Props = $props();
+
+	const tokens = $derived(
+		tokenize(content, {
+			"code-block": /```.+?```/s,
+			"line-break": /\n(?=\n)/,
+			heading: /^###.+$/m,
+			question: /^.*?\|.+$/m,
+			text: /^.+$/m,
+		}),
+	);
 </script>
 
 <div class="content">
-	{#each contentFragments as text}
-		{#if text.startsWith("###")}
-			<h3><TextFormatter content={text.slice(3)} /></h3>
-		{:else if text.startsWith("```") && text.endsWith("```")}
-			{#if text.includes("$")}
-				<InteractableCodeBlock content={text.slice(3, -3)} />
+	{#each tokens as token}
+		{#if token.type === "code-block"}
+			{#if token.value.includes("$TEXT") || token.value.includes("$NUMBER")}
+				<InteractableCodeBlock content={token.value.slice(3, -3)} />
 			{:else}
-				<CodeBlock content={text.slice(3, -3)} />
+				<CodeBlock content={token.value.slice(3, -3)} />
 			{/if}
-		{:else if text.includes("|")}
-			<Question content={text} />
-		{:else}
-			<p><TextFormatter content={text} /></p>
+		{:else if token.type === "line-break"}
+			<br />
+		{:else if token.type === "heading"}
+			<h3><TextFormatter content={token.value.slice(3)} /></h3>
+		{:else if token.type === "question"}
+			<Question content={token.value} />
+		{:else if token.type === "text"}
+			<p><TextFormatter content={token.value} /></p>
 		{/if}
 	{/each}
 </div>
