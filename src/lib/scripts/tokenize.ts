@@ -1,5 +1,13 @@
 export type Token<T extends string> = { type: T | "none"; value: string };
 
+/**
+ * Divide uma string em *tokens* aplicando expresões regulares em série, onde cada *token* é um
+ * objeto com um `type` que identifica a expressão regular que passou e um `value` que contém a
+ * parte da string que correspondeu.
+ * @param string A string a ser desestruturada.
+ * @param rules Um objeto que mapeia nomes identificadores para expressões regulares.
+ * @returns Uma lista de *tokens*.
+ */
 export default function tokenize<T extends string>(string: string, rules: Record<T, RegExp>) {
 	let tokens: Token<T>[] = [{ type: "none", value: string }];
 
