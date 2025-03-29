@@ -1,11 +1,11 @@
 <script lang="ts">
 	import CodeFormatter from "./CodeFormatter.svelte";
-	type Props = { content: string };
+	type Props = { content: string[] };
 
 	const { content }: Props = $props();
 </script>
 
-<div><CodeFormatter {content} /></div>
+<div><CodeFormatter content={content.map(v => "> " + v).join(", ")} /></div>
 
 <style>
 	div {
