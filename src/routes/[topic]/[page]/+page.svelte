@@ -15,6 +15,20 @@
 	const allPageTitles = $derived(data.allPageTitles);
 	const currentTopicTitles = $derived(data.allPageTitles.filter(page => page.title === title));
 
+	let visitedPaths = $state<string[]>([]);
+	$effect(() => {
+		const localStorageValue = localStorage.getItem("visitedPages");
+		if (localStorageValue !== null) {
+			visitedPaths = localStorageValue.split(",");
+		}
+	});
+	$effect(() => {
+		if (!visitedPaths.includes(currentPath)) {
+			visitedPaths.push(currentPath);
+			localStorage.setItem("visitedPages", visitedPaths.join(","));
+		}
+	});
+
 	let menuIsOpen = $state(false);
 	function toggleMenu() {
 		menuIsOpen = !menuIsOpen;
@@ -31,9 +45,15 @@
 		<OptionsMenu onMenuButtonClick={toggleMenu} />
 		<div class="separator" role="presentation"></div>
 		<nav>
-			<TopicPagesList {title} pages={currentTopicTitles} {currentPath} />
+			<TopicPagesList {title} pages={currentTopicTitles} {currentPath} {visitedPaths} />
 		</nav>
-		<NavMenu isOpen={menuIsOpen} pages={allPageTitles} {currentPath} onDismiss={toggleMenu} />
+		<NavMenu
+			isOpen={menuIsOpen}
+			pages={allPageTitles}
+			{currentPath}
+			{visitedPaths}
+			onDismiss={toggleMenu}
+		/>
 	</aside>
 	<main>
 		<article>

@@ -7,9 +7,10 @@
 		isOpen: boolean;
 		pages: readonly { title: string; subtitle: string; path: string }[];
 		currentPath: string;
+		visitedPaths: readonly string[];
 		onDismiss: () => void;
 	};
-	const { isOpen, pages, currentPath, onDismiss }: Props = $props();
+	const { isOpen, pages, currentPath, visitedPaths, onDismiss }: Props = $props();
 	const topics = $derived(Object.groupBy(pages, page => page.title));
 
 	function handleBodyKeyDown(event: KeyboardEvent) {
@@ -37,7 +38,7 @@
 			<ol>
 				{#each Object.entries(topics) as [title, pages]}
 					<li>
-						<TopicPagesList {title} pages={pages!} {currentPath} />
+						<TopicPagesList {title} pages={pages!} {currentPath} {visitedPaths} />
 					</li>
 				{/each}
 			</ol>

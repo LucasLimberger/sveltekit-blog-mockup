@@ -3,8 +3,9 @@
 		title: string;
 		pages: readonly { path: string; subtitle: string }[];
 		currentPath: string;
+		visitedPaths: readonly string[];
 	};
-	const { title, pages, currentPath }: Props = $props();
+	const { title, pages, currentPath, visitedPaths }: Props = $props();
 </script>
 
 <h2>{title}</h2>
@@ -13,6 +14,7 @@
 		<li>
 			<a
 				href={page.path}
+				class:visited={visitedPaths.includes(page.path)}
 				aria-current={page.path === currentPath ? "page" : undefined}
 				data-sveltekit-keepfocus
 			>
@@ -85,7 +87,7 @@
 		width: 0.25rem;
 		background-color: var(--background-tertiary-clr);
 	}
-	a:visited::before {
+	a.visited::before {
 		background-color: var(--nav-visited-clr);
 	}
 	a[aria-current]::before {
