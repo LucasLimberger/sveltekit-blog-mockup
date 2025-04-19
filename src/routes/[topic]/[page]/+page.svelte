@@ -1,6 +1,6 @@
 <script lang="ts">
 	import OptionsMenu from "$lib/components/OptionsMenu.svelte";
-	import TopicNavList from "$lib/components/TopicNavList.svelte";
+	import TopicPagesList from "$lib/components/TopicPagesList.svelte";
 	import NavMenu from "$lib/components/NavMenu.svelte";
 	import PrevNextButtons from "$lib/components/PrevNextButtons.svelte";
 	import ContentDelegator from "$lib/components/ContentDelegator.svelte";
@@ -31,7 +31,7 @@
 		<OptionsMenu onMenuButtonClick={toggleMenu} />
 		<div class="separator" role="presentation"></div>
 		<nav>
-			<TopicNavList {title} pages={currentTopicTitles} {currentPath} />
+			<TopicPagesList {title} pages={currentTopicTitles} {currentPath} />
 		</nav>
 		<NavMenu isOpen={menuIsOpen} pages={allPageTitles} {currentPath} onDismiss={toggleMenu} />
 	</aside>

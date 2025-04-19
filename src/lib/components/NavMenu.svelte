@@ -1,7 +1,7 @@
 <script lang="ts">
 	import trapFocusWithin from "$lib/actions/trapFocusWithin.svelte";
 	import customSlide from "$lib/transitions/customSlide";
-	import TopicNavList from "./TopicNavList.svelte";
+	import TopicPagesList from "./TopicPagesList.svelte";
 
 	type Props = {
 		isOpen: boolean;
@@ -37,7 +37,7 @@
 			<ol>
 				{#each Object.entries(topics) as [title, pages]}
 					<li>
-						<TopicNavList {title} pages={pages!} {currentPath} />
+						<TopicPagesList {title} pages={pages!} {currentPath} />
 					</li>
 				{/each}
 			</ol>
