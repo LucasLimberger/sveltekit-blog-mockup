@@ -5,7 +5,7 @@
 	const { content }: Props = $props();
 </script>
 
-<div><CodeFormatter content={content.map(v => "> " + v).join(", ")} /></div>
+<div><CodeFormatter content={content.map(v => "> " + v).join("\n")} /></div>
 
 <style>
 	div {
