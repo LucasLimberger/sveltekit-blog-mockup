@@ -52,7 +52,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		max-height: 75%;
+		max-height: 60%;
 		display: flex;
 		z-index: 1;
 	}
@@ -123,6 +123,8 @@
 
 	@media (min-width: 60rem) {
 		.container {
+			max-width: 90rem;
+			margin: auto;
 			left: 3rem;
 			right: 3rem;
 		}

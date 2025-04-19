@@ -115,12 +115,13 @@
 }
 
 :root {
-	font-size: clamp(1rem, 0.5rem + 0.6vw, 1.5rem);
+	font-size: clamp(1rem, 0.25rem + 1vw, 1.5rem);
 }
 
 :root,
 body {
-	width: 100%;
+	width: fit-content;
+	min-width: 100%;
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
