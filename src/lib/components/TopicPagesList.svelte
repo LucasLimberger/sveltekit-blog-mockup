@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from "$app/state";
+
 	type Props = {
 		title: string;
 		pages: readonly { path: string; subtitle: string }[];
@@ -6,6 +8,8 @@
 		visitedPaths: readonly string[];
 	};
 	const { title, pages, currentPath, visitedPaths }: Props = $props();
+
+	const theme = $derived(page.url.searchParams.get("theme"));
 </script>
 
 <h2>{title}</h2>
@@ -13,7 +17,7 @@
 	{#each pages as page}
 		<li>
 			<a
-				href={page.path}
+				href={page.path + "?theme=" + theme}
 				class:visited={visitedPaths.includes(page.path)}
 				aria-current={page.path === currentPath ? "page" : undefined}
 				data-sveltekit-keepfocus

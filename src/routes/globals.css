@@ -1,4 +1,5 @@
-:root:not(.dark) {
+:root {
+	/* cores do tema claro */
 	--text-primary-clr: hsl(0 0% 5%);
 	--text-accent-clr: hsl(240 90% 60%);
 	--background-primary-clr: hsl(0 0% 93%);
@@ -30,6 +31,7 @@
 }
 
 :root.dark {
+	/* cores do tema escuro */
 	--text-primary-clr: hsl(0 0% 90%);
 	--text-accent-clr: hsl(240 90% 75%);
 	--background-primary-clr: hsl(0 0% 13%);
@@ -58,6 +60,40 @@
 	--input-text-clr: hsl(60, 90%, 50%);
 	--answer-correct-clr: var(--nav-visited-clr);
 	--answer-incorrect-clr: hsl(0 40% 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not(.light) {
+		/* cores do tema escuro */
+		--text-primary-clr: hsl(0 0% 90%);
+		--text-accent-clr: hsl(240 90% 75%);
+		--background-primary-clr: hsl(0 0% 13%);
+		--background-secondary-clr: hsl(0 0% 18%);
+		--background-tertiary-clr: hsl(0 0% 27%);
+		--accent-clr: hsl(240 90% 70%);
+		--scrollbar-thumb-clr: hsl(0 0% 35%);
+		--scrollbar-thumb-hover-clr: hsl(0 0% 50%);
+		--button-outline-clr: hsl(0 0% 50%);
+		--button-disabled-clr: hsl(0 60% 35%);
+		--focus-outline-clr: hsl(0 0% 90%);
+		/* --nav-current-clr: hsl(from var(--accent-clr) h s l / 30%); */
+		--nav-current-clr: hsla(240 90% 70% / 30%);
+		--nav-current-marker-clr: var(--accent-clr);
+		--nav-visited-clr: hsl(140 80% 30%);
+		--nav-shadow-clr: hsl(0, 0%, 7%);
+
+		--code-comment-clr: hsl(0 0% 60%);
+		--code-string-clr: hsl(20 70% 65%);
+		--code-keyword-clr: hsl(300 70% 60%);
+		--code-special-value-clr: hsl(240 70% 70%);
+		--code-function-clr: hsl(60 80% 70%);
+		--code-number-clr: hsl(160 100% 60%);
+		--inset-border-clrs: hsl(0 0 5%) var(--background-tertiary-clr) var(--background-tertiary-clr)
+			hsl(0 0 5%);
+		--input-text-clr: hsl(60, 90%, 50%);
+		--answer-correct-clr: var(--nav-visited-clr);
+		--answer-incorrect-clr: hsl(0 40% 30%);
+	}
 }
 
 :root {

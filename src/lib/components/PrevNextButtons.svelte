@@ -1,11 +1,15 @@
 <script lang="ts">
+	import { page } from "$app/state";
+
 	type Props = { previousPagePath: string | null; nextPagePath: string | null };
 	const { previousPagePath, nextPagePath }: Props = $props();
+
+	const theme = $derived(page.url.searchParams.get("theme"));
 </script>
 
 <div class="component-container">
-	{@render link(previousPagePath, "Anterior")}
-	{@render link(nextPagePath, "Próximo")}
+	{@render link(previousPagePath + "?theme=" + theme, "Anterior")}
+	{@render link(nextPagePath + "?theme=" + theme, "Próximo")}
 </div>
 
 {#snippet link(href: string | null, text: string)}

@@ -1,5 +1,5 @@
-import type { PageLoad } from "./$types";
-import { error } from "@sveltejs/kit";
+import type { PageServerLoad } from "./$types";
+import { error, redirect } from "@sveltejs/kit";
 import {
 	findPageContents,
 	nextPagePath,
@@ -7,8 +7,8 @@ import {
 	allPageTitles,
 } from "$lib/data/dataAcess";
 
-export const load: PageLoad = async ({ params }) => {
-	const path = `/${params.topic}/${params.page}`;
+export const load: PageServerLoad = async ({ params, url }) => {
+	const path = url.pathname;
 	const pageContents = findPageContents(path);
 	if (pageContents === null) {
 		error(404, "Not found");

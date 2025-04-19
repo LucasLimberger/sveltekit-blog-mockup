@@ -1,27 +1,27 @@
 <script lang="ts">
-	import { getThemeCookieValue, setThemeCookieValue } from "$lib/scripts/themeCookieAcess";
+	import { goto } from "$app/navigation";
+	import { page } from "$app/state";
 
 	type Props = { onMenuButtonClick: () => void };
 	const { onMenuButtonClick }: Props = $props();
 
-	type ThemeOption = "light" | "dark";
-	let theme = $state<ThemeOption>("dark");
+	const theme = $derived(page.url.searchParams.get("theme"));
 
 	$effect(() => {
-		let startingTheme: ThemeOption =
-			getThemeCookieValue(document) ??
-			(matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-		setTheme(startingTheme);
+		if (theme === "light" || theme === "dark") {
+			changeTheme(theme);
+		} else {
+			const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+			changeTheme(prefersDark ? "dark" : "light");
+		}
 	});
 
 	function toggleTheme() {
-		setTheme(theme === "light" ? "dark" : "light");
+		changeTheme(theme === "light" ? "dark" : "light");
 	}
-
-	function setTheme(value: ThemeOption) {
-		theme = value;
-		document.documentElement.classList.toggle("dark", value === "dark");
-		setThemeCookieValue(document, value);
+	function changeTheme(newTheme: "light" | "dark") {
+		goto("?theme=" + newTheme, { noScroll: true, keepFocus: true });
+		document.documentElement.className = newTheme;
 	}
 </script>
 
