@@ -11,7 +11,7 @@
 	const explanation = $derived(content.split("|").at(-1))!;
 
 	// svelte-ignore state_referenced_locally
-	const optionsClicked = $state(Array(options.length).fill(false));
+	const optionsClicked = $state(Array<boolean>(options.length).fill(false));
 
 	let correctlyAnswered = $state(false);
 	function handleClick(index: number) {
