@@ -34,7 +34,9 @@
 				<CodeFormatter content={contentBefore} /><span class="code-insert-point">{processedInput}</span
 				><CodeFormatter content={contentAfter} />
 			</code></pre>
-		<label><input type={inputType} id={inputId} bind:value={inputValue} /></label>
+		<label>
+			<input type={inputType} id={inputId} bind:value={inputValue} autocomplete="off" />
+		</label>
 	</div>
 	<output for={inputId}><CodeOutput content={output} /></output>
 </div>
