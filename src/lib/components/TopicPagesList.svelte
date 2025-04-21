@@ -34,6 +34,7 @@
 		margin-bottom: 1rem;
 		font-family: var(--heading-font);
 		font-size: 2rem;
+		letter-spacing: var(--heading-font-letter-spacing);
 	}
 
 	ol {

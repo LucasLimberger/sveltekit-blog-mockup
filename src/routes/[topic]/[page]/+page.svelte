@@ -141,6 +141,7 @@
 	h2 {
 		font-family: var(--heading-font);
 		font-weight: bold;
+		letter-spacing: var(--heading-font-letter-spacing);
 	}
 	h1 {
 		margin: 0;

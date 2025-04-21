@@ -50,6 +50,7 @@
 		font-size: 1.4rem;
 		font-weight: bold;
 		line-height: 1.5;
+		letter-spacing: var(--heading-font-letter-spacing);
 	}
 
 	p {

@@ -99,6 +99,7 @@
 :root {
 	--main-font: system-ui, Verdana, sans-serif;
 	--heading-font: Chilanka, TSCu_Comic, cursive;
+	--heading-font-letter-spacing: 0.02em;
 	--code-font: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
 }
 
