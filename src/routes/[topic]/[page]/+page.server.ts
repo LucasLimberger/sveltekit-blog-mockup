@@ -6,7 +6,7 @@ export const load = (async ({ url, fetch }) => {
 	const response = await fetch("/api" + path);
 
 	if (response.status >= 400 && response.status <= 599) {
-		error(response.status, response.statusText);
+		error(response.status);
 	}
 
 	const pageContents = await response.json();
