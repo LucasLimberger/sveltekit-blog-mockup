@@ -34,12 +34,12 @@
 				title="Mudar tema"
 				onclick={toggleTheme}
 			>
-				<div class="icon theme-icon" role="presentation"></div>
+				<div class="icon theme-icon" role="img"></div>
 			</button>
 		</li>
 		<li>
 			<button aria-label="Menu de páginas" title="Menu de páginas" onclick={onMenuButtonClick}>
-				<div class="icon menu-icon"></div>
+				<div class="icon menu-icon" role="img"></div>
 			</button>
 		</li>
 	</menu>
@@ -51,7 +51,6 @@
 		padding: 0;
 		display: flex;
 		justify-content: space-between;
-
 		list-style: none;
 	}
 
@@ -68,15 +67,12 @@
 		color: inherit;
 		font: inherit;
 		cursor: pointer;
-
-		animation-duration: 0.3s;
 	}
 
 	button:hover,
 	button:focus-visible {
 		outline: 0.2rem solid var(--focus-outline-clr);
-		animation-name: focus;
-		animation-fill-mode: forwards;
+		animation: focus 0.3s forwards;
 	}
 	@keyframes focus {
 		to {
