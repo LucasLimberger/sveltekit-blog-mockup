@@ -1,7 +1,11 @@
-import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
-import { firstPagePath } from "$lib/data/dataAcess";
+import { error, redirect } from "@sveltejs/kit";
 
-export const load: PageServerLoad = async () => {
-	redirect(307, firstPagePath());
-};
+export const load = (async event => {
+	const response = await event.fetch("/api/first-page-path");
+	const pathname = await response.json();
+	if (typeof pathname !== "string") {
+		error(500, "Could not find first page");
+	}
+	redirect(307, pathname);
+}) satisfies PageServerLoad;

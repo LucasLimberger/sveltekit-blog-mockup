@@ -1,7 +1,27 @@
-import data from "./data.json";
+import type { RequestHandler } from "./$types";
+import { error, json } from "@sveltejs/kit";
+import data from "$lib/data/data.json";
 
-export function findPageContents(path: string) {
+export const GET: RequestHandler = async ({ params }) => {
+	const { topic, page } = params;
+	const pathname = `/${topic}/${page}`;
+	const pageContents = findPageContents(pathname);
+
+	if (pageContents === null) {
+		error(404);
+	}
+
+	return json({
+		...pageContents,
+		nextPagePath: nextPagePath(pathname),
+		previousPagePath: previousPagePath(pathname),
+		allPageTitles: allPageTitles(),
+	});
+};
+
+function findPageContents(path: string) {
 	const [topicPath, pagePath] = path.slice(1).split("/");
+
 	const topicData = data.find(topics => topics.pathDirectory === topicPath);
 	if (topicData === undefined) {
 		return null;
@@ -24,7 +44,7 @@ let memoTitles: readonly {
 	readonly title: string;
 	readonly subtitle: string;
 }[];
-export function allPageTitles() {
+function allPageTitles() {
 	memoTitles ??= data.flatMap(topic =>
 		topic.pages.map(page => ({
 			path: `/${topic.pathDirectory}/${page.path}`,
@@ -35,11 +55,7 @@ export function allPageTitles() {
 	return memoTitles;
 }
 
-export function firstPagePath() {
-	return `/${data[0].pathDirectory}/${data[0].pages[0].path}`;
-}
-
-export function previousPagePath(path: string) {
+function previousPagePath(path: string) {
 	const [topicPath, pagePath] = path.slice(1).split("/");
 	const topicIndex = findTopicIndex(topicPath);
 	if (topicIndex === -1) {
@@ -64,7 +80,7 @@ export function previousPagePath(path: string) {
 	return `/${previousTopic.pathDirectory}/${previousTopic.pages.at(-1)!.path}`;
 }
 
-export function nextPagePath(path: string) {
+function nextPagePath(path: string) {
 	const [topicPath, pagePath] = path.slice(1).split("/");
 	const topicIndex = findTopicIndex(topicPath);
 	if (topicIndex === -1) {
