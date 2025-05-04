@@ -34,14 +34,16 @@
 	}
 	a:hover,
 	a:focus-visible {
-		outline: 0.2rem solid var(--focus-outline-clr);
+		text-decoration: underline 0.125em;
+		background-color: var(--accent-highlight-clr);
+	}
+	a:focus-visible {
+		outline: 0.125rem solid var(--focus-outline-clr);
 		outline-offset: 0.125rem;
-		text-decoration: underline;
-		text-decoration-thickness: 0.125em;
 	}
 
 	.text-wrapper {
-		padding: 0.5rem 0.75rem;
+		padding: 0.5rem 1rem;
 		border-radius: 1.25rem;
 		background-color: var(--accent-clr);
 		font-size: 1.125rem;

@@ -6,6 +6,7 @@
 	--background-secondary-clr: hsl(0 0% 87%);
 	--background-tertiary-clr: hsl(0 0% 78%);
 	--accent-clr: hsl(240 90% 70%);
+	--accent-highlight-clr: hsl(240 90% 76%);
 	--scrollbar-thumb-clr: hsl(0 0% 60%);
 	--scrollbar-thumb-hover-clr: hsl(0 0% 40%);
 	--button-outline-clr: hsl(0 0% 50%);
@@ -38,6 +39,7 @@
 	--background-secondary-clr: hsl(0 0% 18%);
 	--background-tertiary-clr: hsl(0 0% 27%);
 	--accent-clr: hsl(240 90% 70%);
+	--accent-highlight-clr: hsl(240 90% 76%);
 	--scrollbar-thumb-clr: hsl(0 0% 35%);
 	--scrollbar-thumb-hover-clr: hsl(0 0% 50%);
 	--button-outline-clr: hsl(0 0% 50%);
@@ -71,6 +73,7 @@
 		--background-secondary-clr: hsl(0 0% 18%);
 		--background-tertiary-clr: hsl(0 0% 27%);
 		--accent-clr: hsl(240 90% 70%);
+		--accent-highlight-clr: hsl(240 90% 76%);
 		--scrollbar-thumb-clr: hsl(0 0% 35%);
 		--scrollbar-thumb-hover-clr: hsl(0 0% 50%);
 		--button-outline-clr: hsl(0 0% 50%);
